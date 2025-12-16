@@ -38,8 +38,9 @@ export default function Dashboard() {
   const upcoming = userTasks
     .filter((t) => t.deadline)
     .sort((a, b) => new Date(a.deadline) - new Date(b.deadline))
-    .slice(0, 5);
+    .slice(0, 8);
 
+  console.log(upcoming,"upcoming")
   const handleLogout = async () => {
     setDeletingSession(true);
     try {
